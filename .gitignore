@@ -8,5 +8,5 @@
 # C building artifacts
 *.dSYM
 a.out
-chkoverlap
+pt8exam
 *.log

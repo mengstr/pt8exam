@@ -323,7 +323,8 @@ int main(int argc, char *argv[]) {
         for (int i=0; i<32768; i++) {
             uint16_t w=07402; // HLT
             if (memory[i]>=0 && memory[i]<=4095) w=memory[i];
-            write(fd,&w,2);
+            size_t len=write(fd,&w,2);
+            if (len!=2) exit(1);
         }
         close(fd);
     }
